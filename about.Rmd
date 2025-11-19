@@ -1,5 +1,5 @@
 ---
-title: "About This Website"
+title: "About The Student"
 ---
 
 ## Background
@@ -47,5 +47,6 @@ Feel free to connect with me:
 - GitHub: [yourusername](https://github.com/yourusername)
 
 ---
+
 
 [← Back to Home](index.html)
