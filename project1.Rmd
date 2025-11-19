@@ -1,0 +1,131 @@
+---
+title: "Test 1"
+author: "Leonardo- 6675698667"
+date: "2025-09-08"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Executive Summary.
+
+In this section you will see the current amount of people that have visted this website and the current performance of the website such as speed or quality. if the Engagement increases the website performance will increase. Which will indicate that the web design or function needs improvement which is good because we are taking it for a test drive. Now that we know the interest numbers and the functionaliy probability, we can now look for ways to fix the errors that prevent us giving a excellent experience.
+
+## Question 1
+
+Create the dataset
+```{r}
+# Create website performance dataset with business terminology
+webperfo <- data.frame(
+  engagement = airquality$Temp,
+  performance = airquality$Ozone,
+  server_load = airquality$Wind
+)
+```
+
+### Q1. A
+
+A= There are 3 columns of data(engagement, performance and server_load). It is useful to only see the first few rows because  it increases.
+```{r}
+head(webperfo)
+```
+
+
+### Q1. B
+
+A= The Performance has the missing value NA. The Range of engagement is from minimum to maximum.
+```{r}
+summary(webperfo)
+```
+### Q1. C
+
+A= The number tell the amount of people that have used this website which can be useful to come up with other ideas to attract more people.
+```{r}
+nrow(webperfo)
+```
+### Q1. D
+
+A= The median engagement increased by 18
+```{r}
+max(webperfo$engagement)
+```
+### Q1. E
+
+A=This one is the only one that has value unlike D.
+```{r}
+max(webperfo$performance, na.rm = TRUE)
+```
+
+## Question 2
+
+Understanding Relationships
+
+### Q2. A
+
+A=The only pattern that i can see for both performance and engagement is that it slowly increases. Its missing a title and the Y and X axis for representation.
+
+```{r}
+plot(webperfo$engagement, webperfo$performance)
+```
+
+### Q2. B
+
+A= The title and axis help bring people up to speed and to give them the proper info of what is happening and what is what.
+
+```{r}
+plot(x = webperfo$engagement, y = webperfo$performance,
+     main = "User Engagement vs Website Performance",
+     xlab = "Daily User Engagement Score", 
+     ylab = "Website Performance Score")
+```
+
+### Q2. C
+
+A= The pattern between engagement and performance changed by visual color from white to blue. This makes it more easy to see.
+
+```{r}
+plot(x = webperfo$engagement, y = webperfo$performance,
+     main = "User Engagement vs Website Performance",
+     xlab = "Daily User Engagement Score", 
+     ylab = "Website Performance Score",
+pch = 16, col = "blue")
+```
+
+### Q2. D
+
+A= The Red line increases in a direct line.
+
+```{r}
+plot(x = webperfo$engagement, y = webperfo$performance,
+     main = "User Engagement vs Website Performance",
+     xlab = "Daily User Engagement Score", 
+     ylab = "Website Performance Score",
+pch = 16, col = "blue")
+abline(lm(performance ~ engagement, data = webperfo), 
+       col = "red", lwd = 2)
+```
+
+## Question 3
+
+Business Interpretation
+
+### Q3. A
+
+A= The Correlation is 0.6983603. i would say is it coefficient because its moderate because its between 0.3-0.7 meaning that its normal and reliable.
+
+```{r}
+cor(webperfo$engagement, webperfo$performance, use = "complete.obs")
+```
+
+### Q3. B
+
+A= When the Engagement is high the website performance is increased as well but not like engagement. it increases a little.
+
+a e-business manager could start think of improvements in things such as speed, content design, info reorganization, etc.
+
+This grants a great opportunity in the relationship with website strategy. It can let it see as a rough draft which is meant to receive improvements, notes, upgrades. It can show errors that you can later try to avoid.
