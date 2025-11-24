@@ -9,7 +9,14 @@ navbar:
       href: about.html
     - text: "Project"
       href: project.html
+output:
+  html_document:
+    theme: cosmo
+    highlight: tango
+    toc: true
+    toc_float: true
 output_dir: "docs"
 
 ---
+
 
