@@ -9,7 +9,7 @@ navbar:
       href: about.html
       output:
   html_document:
-    theme: cosmo
+    theme: sandstone
     highlight: tango
     - text: "Project"
       href: project.html
@@ -22,6 +22,7 @@ output:
 output_dir: "docs"
 
 ---
+
 
 
 
