@@ -30,7 +30,7 @@ in data analysis, business intelligence, and statistical computing.
 ## Education
 
 **VIU** - E-Management Program  
-*Expected Graduation: [Year]*
+*Expected Graduation: 2030
 
 Relevant Coursework:
 
@@ -50,5 +50,6 @@ Feel free to connect with me:
 
 
 [← Back to Home](index.html)
+
 
 
